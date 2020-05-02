@@ -1,0 +1,23 @@
+<p>test-component works!</p>
+
+<ul>
+  <li *ngFor="let item of items">
+    <span *ngIf="item.done">✔</span>
+    <span *ngIf="!item.done">❌</span>
+    <span>{{ item.text }}</span>
+  </li>
+</ul>
+<div>
+  <!-- <input
+    type="text"
+    name=""
+    [value]="wipItemText"
+    (input)="wipItemText = $event.target.value"
+  />
+  <input type="text" name="" [(ngModel)]="wipItemText" #ctrl="ngModel" /> 
+  <button on-click="onAdd($event)"></button> -->
+  <input type="text" #wipItemTextInput />
+  <button (click)="addItem(wipItemTextInput.value)">Add</button>
+</div>
+
+<p>something random: {{ randomNr | number: "1.1-3" }}</p>
