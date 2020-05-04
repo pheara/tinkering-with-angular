@@ -29,11 +29,13 @@
 <p>Current Id: {{ currentId }}</p>
 
 <ul>
-  <!-- <li *ngFor="let item of items" (click)="this."> -->
-  <li *ngFor="let item of items">
-    <span *ngIf="item.done">✔</span>
-    <span *ngIf="!item.done">❌</span>
-    <span>{{ item.text }}</span>
+  <li *ngFor="let item of items; index as i">
+    <!-- <li *ngFor="let item of items"> -->
+    <a (click)="clickedItem(i)" style="cursor: pointer;">
+      <span *ngIf="item.done">✔</span>
+      <span *ngIf="!item.done">❌</span>
+      <span>{{ item.text }}</span>
+    </a>
   </li>
 </ul>
 <div>

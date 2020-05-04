@@ -40,4 +40,12 @@ export class TestComponentComponent implements OnInit {
   addItem(itemText) {
     this.items.push({ text: itemText, done: false });
   }
+  clickedItem(index) {
+    // event.preventDefault();
+    console.log('event: ', index);
+    const item = this.items[index];
+    if (item) {
+      this.items[index] = { ...item, done: !item.done };
+    }
+  }
 }
