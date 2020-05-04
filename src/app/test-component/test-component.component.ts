@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-test-component',
@@ -14,7 +15,7 @@ export class TestComponentComponent implements OnInit {
   randomNr = 0.0;
   wipItemText = '';
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     setInterval(() => {
