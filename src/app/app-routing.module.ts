@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { TestComponentComponent } from './test-component/test-component.component';
 
 const routes: Routes = [
-  { path: 'somepath', component: TestComponentComponent },
-  { path: 'anotherpath', component: TestComponentComponent },
-  { path: '', redirectTo: '/somepath', pathMatch: 'full' },
-  { path: '**', redirectTo: '/somepath' },
+  { path: 'somepath/:id', component: TestComponentComponent },
+  { path: 'anotherpath/:id', component: TestComponentComponent },
+  { path: '', redirectTo: '/somepath/0', pathMatch: 'full' },
+  { path: '**', redirectTo: '/somepath/0' },
 ];
 
 @NgModule({

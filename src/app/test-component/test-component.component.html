@@ -1,6 +1,35 @@
-<p>test-component works!</p>
+<h1>Angular Router App</h1>
+
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/somepath/{{ incId }}" routerLinkActive="active"
+        >Some Path</a
+      >
+    </li>
+    <li>
+      <a routerLink="/anotherpath/{{ incId }}" routerLinkActive="active"
+        >Another Path</a
+      >
+    </li>
+    <li>
+      <a routerLink="/somepath/{{ randomId }}" routerLinkActive="active"
+        >Some Path RND</a
+      >
+    </li>
+    <li>
+      <a routerLink="/anotherpath/{{ randomId }}" routerLinkActive="active"
+        >Another Path + rnd</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<p>Current Id: {{ currentId }}</p>
 
 <ul>
+  <!-- <li *ngFor="let item of items" (click)="this."> -->
   <li *ngFor="let item of items">
     <span *ngIf="item.done">✔</span>
     <span *ngIf="!item.done">❌</span>
